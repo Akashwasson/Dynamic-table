@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+           table {
+                font-family: arial, sans-serif;
+                /* border-collapse: collapse; */
+                width: 100%;
+                margin-left: 20px;
+			          }
+                  td,th,thead {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                 }
+            
+            #content{
+                
+                 display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 20px; /* Location of the box */
+                 left: 30%;
+                padding-bottom: 20px;
+                width: 30%; /* Full width */
+                height: 30%; /* Full height */
+                 overflow: auto; /* Enable scroll if needed */
+                 background-color: lightgrey;
+                 text-align: center;
+                }
+                
+                #content input[type="text"] {
+                /* display: block; */
+                margin : 10px 0px;
+                text-align: center;
+                 }
+            #btn{
+                margin: 2% 5%;
+                  font-size: 20px;
+                  border:white 1px solid;
+                  padding: 10px;
+                  background-color: blue;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 10%;
+                }
+         .close {
+                  color: red;
+                  margin-top:0px;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                  width: 20%;
+                 }
+    
+    </style>
+</head>
+<body>
+        <button id="btn"  >Add data</button>
+        <button id="btn1"> Search</button>
+        <input type="text" name="search" id="search" oninput="searchitem()" value="" placeholder="enter id/name">
+       <div id="container">
+          <center><div id="content" style="margin-top: 10px" >
+          <div> <span class="close">&times;</span></div>
+              <div style="margin-top: 50px; margin-left: 20px"> id: <input type="text" name="id" id="idd" value=""> </div>
+              <div> Name:<input type="text" name="name" id="namee"value=""></div>
+              <div> address:<input type="text" name="address" id="addresss" value=""></div>
+              <div style="margin-left: 30px"><input type="button" id="savebtn"  value="save"></div>
+           </div>
+      </div>
+      </center></div>
+    <table>
+        <thead>
+            <tr><th>students id:</th>
+                <th>students name:</th>
+                <th>students address:</th>
+                <th>Edit/Remove data:</th>
+            </tr>
+         </thead>
+         <tbody id="table">
+
+         </tbody>
+    </table>
+    
+    
+</body>
+</html>
+<script src="scripts/table.js"></script>
